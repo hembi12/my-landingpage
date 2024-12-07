@@ -76,8 +76,8 @@ const Navbar = () => {
     return (
         <nav
             ref={navbarRef}
-            className={`fixed top-0 left-0 w-full bg-zinc-500 bg-clip-padding backdrop-filter backdrop-blur 
-            ${scrolled ? 'bg-opacity-10' : 'bg-opacity-0'} 
+            className={`fixed top-0 left-0 w-full bg-blue-500 bg-clip-padding backdrop-filter backdrop-blur 
+            ${scrolled ? 'bg-opacity-25' : 'bg-opacity-0'} 
             backdrop-saturate-100 backdrop-contrast-100 text-white z-50 transition-opacity duration-300`}
         >
             <div className="container mx-auto flex justify-between items-center px-4 py-3">
@@ -91,7 +91,7 @@ const Navbar = () => {
                                 e.preventDefault();
                                 window.history.back();
                             }}
-                            className="hover:text-slate-300 cursor-pointer bg-transparent border-none p-0"
+                            className="hover:text-yellow-300 cursor-pointer bg-transparent border-none p-0"
                         >
                             Regresar
                         </button>
@@ -101,11 +101,11 @@ const Navbar = () => {
                 )}
                 {isPrivacyPolicy ? (
                     <>
-                        <div className="hidden md:flex space-x-6 items-center">
+                        <div className="hidden lg:flex space-x-6 items-center">
                             <div className="relative">
                                 <button
                                     onClick={() => setDropdownOpen(!dropdownOpen)}
-                                    className={`flex items-center hover:text-slate-300 ${
+                                    className={`flex items-center hover:text-yellow-300 ${
                                         dropdownOpen ? "font-bold underline" : ""
                                     }`}
                                 >
@@ -113,7 +113,7 @@ const Navbar = () => {
                                     <FaChevronDown className="ml-2" />
                                 </button>
                                 {dropdownOpen && (
-                                    <div className="absolute left-0 mt-2 bg-slate-800 text-white rounded-lg shadow-lg md:w-40 w-auto">
+                                    <div className="absolute left-0 mt-2 bg-slate-800 text-white rounded-lg shadow-lg lg:w-40 w-auto">
                                         <button
                                             onClick={() => {
                                                 setLanguage("Español");
@@ -146,7 +146,7 @@ const Navbar = () => {
                                 )}
                             </div>
                         </div>
-                        <div className="md:hidden">
+                        <div className="lg:hidden">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 className="text-slate-300 focus:outline-none"
@@ -174,12 +174,12 @@ const Navbar = () => {
                     </>
                 ) : (
                     <>
-                        <div className="hidden md:flex space-x-6 items-center">
+                        <div className="hidden lg:flex space-x-6 items-center">
                             <a
                                 href="#hero"
                                 onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}
-                                className={`hover:text-slate-300 ${
-                                    activeSection === "hero" ? "font-bold underline" : ""
+                                className={`hover:text-yellow-400 ${
+                                    activeSection === "hero" ? "text-yellow-400 font-bold underline" : ""
                                 }`}
                             >
                                 Inicio
@@ -187,8 +187,8 @@ const Navbar = () => {
                             <a
                                 href="#benefits"
                                 onClick={(e) => { e.preventDefault(); scrollToSection('benefits'); }}
-                                className={`hover:text-slate-300 ${
-                                    activeSection === "benefits" ? "font-bold underline" : ""
+                                className={`hover:text-yellow-400 ${
+                                    activeSection === "benefits" ? "text-yellow-400 font-bold underline" : ""
                                 }`}
                             >
                                 Beneficios
@@ -196,8 +196,8 @@ const Navbar = () => {
                             <a
                                 href="#features"
                                 onClick={(e) => { e.preventDefault(); scrollToSection('features'); }}
-                                className={`hover:text-slate-300 ${
-                                    activeSection === "features" ? "font-bold underline" : ""
+                                className={`hover:text-yellow-400 ${
+                                    activeSection === "features" ? "text-yellow-400 font-bold underline" : ""
                                 }`}
                             >
                                 Características
@@ -205,8 +205,8 @@ const Navbar = () => {
                             <a
                                 href="#testimonials"
                                 onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}
-                                className={`hover:text-slate-300 ${
-                                    activeSection === "testimonials" ? "font-bold underline" : ""
+                                className={`hover:text-yellow-400 ${
+                                    activeSection === "testimonials" ? "text-yellow-400 font-bold underline" : ""
                                 }`}
                             >
                                 Testimonios
@@ -214,8 +214,8 @@ const Navbar = () => {
                             <a
                                 href="#projects"
                                 onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}
-                                className={`hover:text-slate-300 ${
-                                    activeSection === "projects" ? "font-bold underline" : ""
+                                className={`hover:text-yellow-400 ${
+                                    activeSection === "projects" ? "text-yellow-400 font-bold underline" : ""
                                 }`}
                             >
                                 Proyectos
@@ -223,8 +223,8 @@ const Navbar = () => {
                             <a
                                 href="#trust"
                                 onClick={(e) => { e.preventDefault(); scrollToSection('trust'); }}
-                                className={`hover:text-slate-300 ${
-                                    activeSection === "trust" ? "font-bold underline" : ""
+                                className={`hover:text-yellow-400 ${
+                                    activeSection === "trust" ? "text-yellow-400 font-bold underline" : ""
                                 }`}
                             >
                                 Confianza
@@ -232,8 +232,8 @@ const Navbar = () => {
                             <a
                                 href="#contact"
                                 onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}
-                                className={`hover:text-slate-300 ${
-                                    activeSection === "contact" ? "font-bold underline" : ""
+                                className={`hover:text-yellow-400 ${
+                                    activeSection === "contact" ? "text-yellow-400 font-bold underline" : ""
                                 }`}
                             >
                                 Contacto
@@ -241,8 +241,8 @@ const Navbar = () => {
                             <a
                                 href="#guarantees"
                                 onClick={(e) => { e.preventDefault(); scrollToSection('guarantees'); }}
-                                className={`hover:text-slate-300 ${
-                                    activeSection === "guarantees" ? "font-bold underline" : ""
+                                className={`hover:text-yellow-400 ${
+                                    activeSection === "guarantees" ? "text-yellow-400 font-bold underline" : ""
                                 }`}
                             >
                                 Garantías
@@ -250,21 +250,21 @@ const Navbar = () => {
                             <div className="relative">
                                 <button
                                     onClick={() => setDropdownOpen(!dropdownOpen)}
-                                    className={`flex items-center hover:text-slate-300 ${
-                                        dropdownOpen ? "font-bold underline" : ""
+                                    className={`flex items-center hover:text-yellow-400 ${
+                                        dropdownOpen ? "text-yellow-400 font-bold underline" : ""
                                     }`}
                                 >
                                     Lenguaje
                                     <FaChevronDown className="ml-2" />
                                 </button>
                                 {dropdownOpen && (
-                                    <div className="absolute left-0 mt-2 bg-slate-800 text-white rounded-lg shadow-lg md:w-40 w-auto">
+                                    <div className="absolute left-0 mt-2 bg-blue-800 text-white rounded-lg shadow-lg lg:w-40 w-auto">
                                         <button
                                             onClick={() => {
                                                 setLanguage("Español");
                                                 setDropdownOpen(false);
                                             }}
-                                            className="flex items-center px-4 py-2 hover:bg-slate-600 text-left w-full"
+                                            className="flex items-center px-4 py-2 hover:bg-yellow-400 hover:text-blue-900 text-left font-bold w-full"
                                         >
                                             <img
                                                 src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/mx.svg"
@@ -278,7 +278,7 @@ const Navbar = () => {
                                                 setLanguage("Inglés");
                                                 setDropdownOpen(false);
                                             }}
-                                            className="flex items-center px-4 py-2 hover:bg-slate-600 text-left w-full"
+                                            className="flex items-center px-4 py-2 hover:bg-yellow-400 hover:text-blue-900 text-left font-bold w-full"
                                         >
                                             <img
                                                 src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg"
@@ -291,7 +291,7 @@ const Navbar = () => {
                                 )}
                             </div>
                         </div>
-                        <div className="md:hidden">
+                        <div className="lg:hidden">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 className="text-slate-300 focus:outline-none"
@@ -321,7 +321,7 @@ const Navbar = () => {
             </div>
 
             {isPrivacyPolicy && isOpen && (
-                <div className="md:hidden">
+                <div className="lg:hidden">
                     <div className="relative">
                         <button
                             onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
@@ -367,12 +367,12 @@ const Navbar = () => {
             )}
 
             {!isPrivacyPolicy && isOpen && (
-                <div className="md:hidden">
+                <div className="lg:hidden">
                     <a
                         href="#hero"
                         onClick={(e) => { e.preventDefault(); scrollToSection('hero'); setIsOpen(false); }}
-                        className={`block px-4 py-2 hover:bg-slate-600 ${
-                            activeSection === "hero" ? "font-bold underline" : ""
+                        className={`block px-4 py-2 font-bold hover:bg-yellow-400 hover:text-blue-900 ${
+                            activeSection === "hero" ? "text-yellow-400 font-bold underline" : ""
                         }`}
                     >
                         Inicio
@@ -380,8 +380,8 @@ const Navbar = () => {
                     <a
                         href="#benefits"
                         onClick={(e) => { e.preventDefault(); scrollToSection('benefits'); setIsOpen(false); }}
-                        className={`block px-4 py-2 hover:bg-slate-600 ${
-                            activeSection === "benefits" ? "font-bold underline" : ""
+                        className={`block px-4 py-2 font-bold hover:bg-yellow-400 hover:text-blue-900 ${
+                            activeSection === "benefits" ? "text-yellow-400 font-bold underline" : ""
                         }`}
                     >
                         Beneficios
@@ -389,8 +389,8 @@ const Navbar = () => {
                     <a
                         href="#features"
                         onClick={(e) => { e.preventDefault(); scrollToSection('features'); setIsOpen(false); }}
-                        className={`block px-4 py-2 hover:bg-slate-600 ${
-                            activeSection === "features" ? "font-bold underline" : ""
+                        className={`block px-4 py-2 font-bold hover:bg-yellow-400 hover:text-blue-900 ${
+                            activeSection === "features" ? "text-yellow-400 font-bold underline" : ""
                         }`}
                     >
                         Características
@@ -398,8 +398,8 @@ const Navbar = () => {
                     <a
                         href="#testimonials"
                         onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); setIsOpen(false); }}
-                        className={`block px-4 py-2 hover:bg-slate-600 ${
-                            activeSection === "testimonials" ? "font-bold underline" : ""
+                        className={`block px-4 py-2 font-bold hover:bg-yellow-400 hover:text-blue-900 ${
+                            activeSection === "testimonials" ? "text-yellow-400 font-bold underline" : ""
                         }`}
                     >
                         Testimonios
@@ -407,8 +407,8 @@ const Navbar = () => {
                     <a
                         href="#projects"
                         onClick={(e) => { e.preventDefault(); scrollToSection('projects'); setIsOpen(false); }}
-                        className={`block px-4 py-2 hover:bg-slate-600 ${
-                            activeSection === "projects" ? "font-bold underline" : ""
+                        className={`block px-4 py-2 font-bold hover:bg-yellow-400 hover:text-blue-900 ${
+                            activeSection === "projects" ? "text-yellow-400 font-bold underline" : ""
                         }`}
                     >
                         Proyectos
@@ -416,8 +416,8 @@ const Navbar = () => {
                     <a
                         href="#trust"
                         onClick={(e) => { e.preventDefault(); scrollToSection('trust'); setIsOpen(false); }}
-                        className={`block px-4 py-2 hover:bg-slate-600 ${
-                            activeSection === "trust" ? "font-bold underline" : ""
+                        className={`block px-4 py-2 font-bold hover:bg-yellow-400 hover:text-blue-900 ${
+                            activeSection === "trust" ? "text-yellow-400 font-bold underline" : ""
                         }`}
                     >
                         Confianza
@@ -425,8 +425,8 @@ const Navbar = () => {
                     <a
                         href="#contact"
                         onClick={(e) => { e.preventDefault(); scrollToSection('contact'); setIsOpen(false); }}
-                        className={`block px-4 py-2 hover:bg-slate-600 ${
-                            activeSection === "contact" ? "font-bold underline" : ""
+                        className={`block px-4 py-2 font-bold hover:bg-yellow-400 hover:text-blue-900 ${
+                            activeSection === "contact" ? "text-yellow-400 font-bold underline" : ""
                         }`}
                     >
                         Contacto
@@ -434,8 +434,8 @@ const Navbar = () => {
                     <a
                         href="#guarantees"
                         onClick={(e) => { e.preventDefault(); scrollToSection('guarantees'); setIsOpen(false); }}
-                        className={`block px-4 py-2 hover:bg-slate-600 ${
-                            activeSection === "guarantees" ? "font-bold underline" : ""
+                        className={`block px-4 py-2 font-bold hover:bg-yellow-400 hover:text-blue-900 ${
+                            activeSection === "guarantees" ? "text-yellow-400 font-bold underline" : ""
                         }`}
                     >
                         Garantías
@@ -443,19 +443,19 @@ const Navbar = () => {
                     <div className="relative">
                         <button
                             onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-                            className="block px-4 py-2 hover:bg-slate-600 flex items-center justify-between w-full"
+                            className="block px-4 py-2 font-bold hover:bg-yellow-400 hover:text-blue-900 flex items-center justify-between w-full"
                         >
                             Lenguaje
                             <FaChevronDown className="ml-2" />
                         </button>
                         {mobileDropdownOpen && (
-                            <div className="text-white rounded-lg">
+                            <div className="text-white font-bold rounded-lg">
                                 <button
                                     onClick={() => {
                                         setLanguage("Español");
                                         setMobileDropdownOpen(false);
                                     }}
-                                    className="flex items-center px-4 py-2 hover:bg-slate-600 text-left w-full"
+                                    className="flex items-center px-4 py-2 hover:bg-yellow-400 hover:text-blue-900 text-left w-full"
                                 >
                                     <img
                                         src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/mx.svg"
@@ -469,7 +469,7 @@ const Navbar = () => {
                                         setLanguage("Inglés");
                                         setMobileDropdownOpen(false);
                                     }}
-                                    className="flex items-center px-4 py-2 hover:bg-slate-600 text-left w-full"
+                                    className="flex items-center px-4 py-2 hover:bg-yellow-400 hover:text-blue-900 text-left w-full"
                                 >
                                     <img
                                         src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg"

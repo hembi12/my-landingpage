@@ -34,7 +34,7 @@ const Benefits = () => {
     return (
         <section
             id="benefits"
-            className="bg-gray-100 py-16 text-gray-900"
+            className="bg-gradient-to-b from-blue-700 via-blue-800 to-blue-900 py-20 text-gray-900"
         >
             <div className="container mx-auto px-4 text-center">
                 {/* Título */}
