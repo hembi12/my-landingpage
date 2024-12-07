@@ -81,8 +81,8 @@ const Navbar = () => {
             backdrop-saturate-100 backdrop-contrast-100 text-white z-50 transition-opacity duration-300`}
         >
             <div className="container mx-auto flex justify-between items-center px-4 py-3">
-                <div className="bg-gradient-to-b from-slate-500 via-slate-300 to-white bg-clip-text text-transparent text-2xl font-bold">
-                    HM
+                <div className="bg-gradient-to-b from-slate-300 via-slate-200 to-white bg-clip-text text-transparent text-2xl font-bold">
+                    Senda
                 </div>
                 {isPrivacyPolicy && (
                     <div className="flex space-x-2 text-sm">

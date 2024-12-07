@@ -13,11 +13,11 @@ const Hero = () => {
     return (
         <section
             id="hero"
-            className="bg-gradient-to-t from-gray-700 via-gray-900 to-black text-white h-screen flex flex-col justify-center items-center relative"
+            className="bg-gradient-to-t from-blue-700 via-blue-800 to-blue-950 text-white h-screen flex flex-col justify-center items-center relative"
         >
             <div className="container mx-auto px-4 text-center">
                 {/* Mensaje impactante */}
-                <h1 className="bg-gradient-to-b from-slate-500 via-slate-300 to-white bg-clip-text text-transparent text-6xl sm:text-7xl md:text-8xl font-bold mb-4 leading-tight">
+                <h1 className="bg-gradient-to-b from-slate-300 via-slate-200 to-white bg-clip-text text-transparent text-6xl sm:text-7xl md:text-8xl font-bold mb-4 leading-tight">
                     Transforma tu presencia online con un sitio web profesional.
                 </h1>
                 {/* Subtítulo */}
@@ -32,7 +32,7 @@ const Hero = () => {
                             e.preventDefault();
                             scrollToSection("quote");
                         }}
-                        className="bg-blue-500 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition duration-300"
+                        className="bg-yellow-400 text-blue-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-300 transition duration-300"
                     >
                         Solicita una cotización gratuita
                     </a>
