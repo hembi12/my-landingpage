@@ -1,7 +1,16 @@
-import React from "react";
-import { FaPaintBrush, FaMobileAlt, FaSearch, FaBolt, FaShoppingCart } from "react-icons/fa";
+import React, { useState } from "react";
+import {
+    FaPaintBrush,
+    FaMobileAlt,
+    FaSearch,
+    FaBolt,
+    FaShoppingCart,
+    FaHeadset,
+} from "react-icons/fa";
 
 const Benefits = () => {
+    const [showAll, setShowAll] = useState(false);
+
     const benefits = [
         {
             icon: <FaPaintBrush size={40} className="text-blue-500" />,
@@ -26,8 +35,12 @@ const Benefits = () => {
         {
             icon: <FaShoppingCart size={40} className="text-purple-500" />,
             title: "Integraciones avanzadas",
-            description:
-                "Tiendas en línea, sistemas de reservas, formularios, y más.",
+            description: "Tiendas en línea, sistemas de reservas, formularios, y más.",
+        },
+        {
+            icon: <FaHeadset size={40} className="text-indigo-500" />,
+            title: "Soporte continuo",
+            description: "Asistencia técnica y actualizaciones periódicas.",
         },
     ];
 
@@ -38,24 +51,40 @@ const Benefits = () => {
         >
             <div className="container mx-auto px-4 text-center">
                 {/* Título */}
-                <h2 className="text-4xl font-bold mb-8">
+                <h2 className="text-slate-200 text-4xl font-bold mb-8">
                     ¿Por qué elegirnos para tu sitio web?
                 </h2>
+
+                {/* Tarjetas */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                    {/* Beneficios */}
-                    {benefits.map((benefit, index) => (
-                        <div
-                            key={index}
-                            className="flex flex-col items-center text-center bg-white shadow-lg rounded-lg p-6"
-                        >
-                            {/* Ícono */}
-                            <div className="mb-4">{benefit.icon}</div>
-                            {/* Título del beneficio */}
-                            <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                            {/* Descripción */}
-                            <p className="text-gray-600">{benefit.description}</p>
-                        </div>
-                    ))}
+                    {benefits.map((benefit, index) => {
+                        return (
+                            <div
+                                key={index}
+                                className={`bg-blue-50 flex flex-col items-center text-center shadow-xl rounded-lg p-6 ${index >= 3
+                                        ? (!showAll
+                                            ? "hidden sm:flex"
+                                            : "flex"          
+                                        )
+                                        : "flex"         
+                                    }`}
+                            >
+                                <div className="mb-4">{benefit.icon}</div>
+                                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                                <p className="text-gray-600">{benefit.description}</p>
+                            </div>
+                        );
+                    })}
+                </div>
+
+                {/* Botón Ver más solo en móviles */}
+                <div className="mt-6 sm:hidden">
+                    <button
+                        onClick={() => setShowAll(!showAll)}
+                        className="bg-yellow-400 text-blue-900 px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-yellow-300 transition duration-300"
+                    >
+                        {showAll ? "Ver menos" : "Ver más"}
+                    </button>
                 </div>
             </div>
         </section>

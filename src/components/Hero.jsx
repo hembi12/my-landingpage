@@ -44,7 +44,7 @@ const Hero = () => {
                                 e.preventDefault();
                                 scrollToSection("contact");
                             }}
-                            className="border border-white text-white px-6 py-3 rounded-full font-bold text-sm sm:text-base hover:bg-white hover:text-blue-500 transition duration-300"
+                            className="border border-white text-white px-6 py-3 rounded-full font-bold text-sm sm:text-base hover:bg-yellow-400 hover:text-blue-900 transition duration-300"
                         >
                             Habla con un experto ahora
                         </a>
@@ -56,7 +56,7 @@ const Hero = () => {
                     <img
                         src={HeroImage}
                         alt="Ejemplos de sitios web"
-                        className="w-full sm:w-full md:w-full lg:w-full max-w-full md:max-w-full lg:max-w-full"
+                        className="w-3/4 sm:w-3/4 md:w-full lg:w-full max-w-md md:max-w-2xl lg:max-w-2xl"
                     />
                 </div>
             </div>
